@@ -1,0 +1,145 @@
+<div class="col-md-6">
+    <h1>
+        <a href="#"><img class="img-rounded img-responsive" alt="Grupo Seleccion S.A" src="/images/logo.png" /></a>
+    </h1>
+</div>
+<div class="col-md-6 text-right">
+    <h4>Fecha: <span id="fecha"></span></h4>
+    <h1>Orden de compra</h1>
+    <h1><small>Orden #<span id="ordenCompra"></span></small></h1>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Proveedor: <select class="nombreProveedor"></select></h4>
+            </div>
+            <div class="panel-body">
+                Nit Proveedor: <span id="cedulaProveedor"></span><br> Dirección: <span id="direccionProveedor"></span><br>                Telefono: <span id="telefonoProveedor"></span><br><br>
+                <button class="btn" type="button" id="agregarProv">Agregar proveedor</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-md-offset-2 text-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Empleado: <span id="nombreE"></span></h4>
+                <h4><small>ID: #<span id="idE"></span></small></h4>
+            </div>
+            <div class="panel-body">Grupo Seleccion S.A</div>
+        </div>
+    </div>
+</div>
+
+<table id="detalle" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                <h4>Item</h4>
+            </th>
+            <th>
+                <h4>Producto</h4>
+            </th>
+            <th>
+                <h4>Precio</h4>
+            </th>
+            <th>
+                <h4>Cantidad</h4>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-md-6">
+        
+        Agregar producto: <select class="OS form-control"></select><br> 
+        <a onclick="llenarFormulario()" class="btn btn-default" href="#" data-toggle="modal" data-target="#crearProducto">Crear Producto</a><br> <br> <br> 
+        <button class="btn btn-default" type="button" id="enviar">Enviar</button>
+    </div>
+    <div class="col-md-6 text-right"><strong>
+Sub Total: <br> 
+
+Total:
+</strong></div>
+</div>
+
+
+<div class="modal fade" id="crearProducto" tabindex="-1" role="dialog" aria-labelledby="label-modal-actualizar-clave">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="window.location.reload(true)" data-dismiss="modal" aria-label="Close">x</button>
+                    <h4 class="modal-title" id="label-modal-actualizar-clave">Crear producto</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="form-actualizar-clave">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="marca">Marca</label>
+                                                    <select type="marca" class="form-control marca" name="marca"> </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="tipo">Tipo</label>
+                                                    <select type="tipo" class="form-control tipo" name="tipo"> </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="estante">Estante</label>
+                                                    <select type="estante" class="form-control estante" name="estante"> </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="nombre">Nombre</label>
+                                                    <input type="text" class="form-control nombre" name="nombre">
+                                                </div>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" id="crearProducto" class="btn btn-default pull-right" onclick="crearProducto()">Guardar
+							</button>
+                    </form>
+                    <br/>
+                    <br/>
+                    <div id="alerta-submit-actualizar-clave" class="hide">
+                        <p>Mensaje de error</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<script src="/javascripts/ordenScript.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.1.0/jspdf.plugin.autotable.js"></script>

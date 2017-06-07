@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- CSS  -->
+    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+  body, h1, h2, h3, h4, h5, h6{
+    font-family: 'Bree Serif', serif;
+  }
+  </style>
+    <!-- DataTables CSS -->
+    <link href="/stylesheets/data-tables.css" type="text/css" rel="stylesheet">
+    <link href="/stylesheets/data-tables-themes.css" type="text/css" rel="stylesheet">
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="/javascripts/data-tables.js"></script>
+    <script type="text/javascript" charset="utf8" src="/javascripts/moment.min.js"></script>
+    <script src="/js/jquery.min.js" charset="utf-8"></script>
+    <title>Grupo Seleccion S.A</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <h1><img class="text-center responsive" alt="Grupo Seleccion S.A" src=""></h1>
+              <br/>  
+             <h4><i class="glyphicon glyphicon-user"></i>&nbsp;  <span id=username>{{user}}</span></h4>
+            </div>
+            <hr/>
+        </div>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Inventario</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="/productos/inventario">Productos</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Compras
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="/compras/orden" class="active">Orden compra</a>
+                                </p>
+                                <p>
+                                    <a href="/compras/factura">Factura compra</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Clientes
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="/clientes">Consultar clientes</a>
+                                </p>
+                                <p>
+                                    <a href="/clientes/crear">Crear cliente</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Proveedores
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="/proveedores">Consultar proveedores</a>
+                                </p>
+                                <p>
+                                    <a href="/plataforma/crear">Crear proveedor</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Cambiar contraseña
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="#" data-toggle="modal" data-target="#actualizar-clave">Actualizar contraseña</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Cerrar sesión
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="/login/signout">Cerrar sesión</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+            {{{body}}}
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="container-fuid">
+        <div class="row">
+            <footer>
+                <p>&copy; Bases de Datos I - Grupo Seleccion S.A</p>
+            </footer>
+            <br/>
+        </div>
+    </div>
+    <div class="modal fade" id="actualizar-clave" tabindex="-1" role="dialog" aria-labelledby="label-modal-actualizar-clave">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" onclick="window.location.reload(true)" data-dismiss="modal" aria-label="Close">x</button>
+                    <h4 class="modal-title" id="label-modal-actualizar-clave">Actualizar contraseña</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="form-actualizar-clave">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="clave_antigua">Contraseña anterior</label>
+                                                    <input type="password" class="form-control" name="clave_antigua" placeholder="Contraseña anterior" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="clave">Nueva contraseña</label>
+                                                    <input type="password" class="form-control" name="clave" placeholder="Nueva contraseña" required>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <label for="reclave">Confirmar nueva contraseña</label>
+                                                    <input type="password" class="form-control" name="reclave" placeholder="Confirmar contraseña" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" id="boton-submit-actualizar-clave" class="btn btn-default pull-right" onclick="actualizarClave()">Actualizar
+							</button>
+                    </form>
+                    <br/>
+                    <br/>
+                    <div id="alerta-submit-actualizar-clave" class="hide">
+                        <p>Mensaje de error</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Scripts-->
+        
+        <script src="/js/bootstrap.min.js" charset="utf-8"></script>
+        <script src="/javascripts/Script.js" charset="utf-8"></script>
+        
+</body>
+
+</html>

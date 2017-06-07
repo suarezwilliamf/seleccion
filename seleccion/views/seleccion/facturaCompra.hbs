@@ -1,0 +1,92 @@
++9--<div class="col-md-6">
+    <h1>
+        <a href="#"><img class="img-rounded img-responsive" alt="Grupo Seleccion S.A" src="/images/logo.png" /></a>
+    </h1>
+</div>
+<div class="col-md-6 text-right">
+    <h4>Fecha: <span id="fecha"></span></h4>
+    <h1>Factura de compra</h1>
+    <h1><small>Factura #<span id="facturaCompra"></span></small></h1>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Proveedor: <select class="nombreProveedor"></select></h4>
+            </div>
+            <div class="panel-body">
+                Nit Proveedor: <span id="cedulaProveedor"></span><br> Dirección: <span id="direccionProveedor"></span><br>                Telefono: <span id="telefonoProveedor"></span><br><br>
+                <button class="btn" type="button" id="agregarProv">Agregar proveedor</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-md-offset-2 text-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Empleado: <span id="nombreE"></span></h4>
+                <h4><small>ID: #<span id="idE"></span></small></h4>
+            </div>
+            <div class="panel-body">Grupo Seleccion S.A</div>
+        </div>
+    </div>
+</div>
+<div>No Orden: <input id="numOrden" type="text">
+<button class="btn btn-default" type="button" onclick="getOrdenCompra();">Consultar</button>
+</div> <br>
+<table id="detalle" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                <h5>ID</h5>
+            </th>
+            <th>
+                <h5>Tipo</h5>
+            </th>
+            <th>
+                <h5>Proveedor</h5>
+            </th>
+            <th>
+                <h5># Transaccion</h5>
+            </th>
+            <th>
+                <h5>Empleado</h5>
+            </th>
+            <th>
+                <h5>Fecha</h5>
+            </th>
+            <th>
+                <h5>Hora</h5>
+            </th>
+            <th>
+                <h5>Descuenton</h5>
+            </th>
+            <th>
+                <h5>Total</h5>
+            </th>
+            <th>
+                <h5>Factura prv</h5>
+            </th>
+            <th>
+                <h5></h5>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+        </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-md-6">
+        <button class="btn btn-default" type="button" id="total">Totalizar</button>
+    </div>
+    <div class="col-md-6 text-right"><strong>
+Sub Total: <br> 
+
+Total:
+</strong></div>
+</div>
+<script src="/javascripts/facturaScript.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.1.0/jspdf.plugin.autotable.js"></script>

@@ -1,0 +1,55 @@
+@font-face
+{
+    font-family: "Eurosti";
+    src: url("../fonts/Eurosti.eot");
+    src: url("../fonts/Eurosti.eot") format("embedded-opentype"),
+        url("../fonts/Eurosti.woff") format("woff"),
+        url("../fonts/Eurosti.ttf") format("truetype"),
+        url("../fonts/Eurosti.svg") format("svg");
+}
+
+body{
+    font-family:  Eurosti;
+    font-size: 15px;
+}
+
+h1
+{
+    color: #660000;
+    font-size: 50px;
+}
+
+h2
+{
+    color: #7C7F32;
+    margin-top: 0px;
+}
+
+h3
+{
+    color: #002E57;
+}
+
+h4
+{
+    color: #7C7F32;
+}
+
+h5
+{
+   font-size: 15px;
+}
+
+hr {
+    background-color: #002E57;
+    width: 40%;
+    height: 1px;
+}
+
+footer
+{
+    padding: 15px 0px 2px 0px;
+    text-align: center;
+    background-color: #660000;
+    color: #ffffff;
+}
